@@ -1,41 +1,57 @@
 Rails.application.routes.draw do
-  get 'categories/create'
+  root 'restaurants#index'
 
-  get 'categories/new'
+  resources :categories, only: %i(index show)
 
-  get 'categories/show'
+  resources :sessions, only: %i(new create destroy)
 
-  get 'categories/index'
+  resources :reservations, only: %i(new create destroy show)
 
-  get 'categories/index'
+  resources :users, only: %i(new create)
 
-  get 'categories/show'
+  resources :restaurants, except: %i(destroy update edit)
+  # get 'categories/create'
+  #
+  # get 'categories/new'
+  #
+  # get 'categories/show'
+  #
+  # get 'categories/index'
+  # get 'sessions/new'
+  #
+  # get 'sessions/create'
+  #
+  # get 'sessions/destroy'
+  #
+  # get 'reservations/new'
+  #
+  # get 'reservations/create'
+  #
+  # get 'reservations/destroy'
+  #
+  # get 'reservations/show'
+  #
+  # get 'users/new'
+  #
+  # get 'users/create'
+  # get 'restaurants/index'
+  #
+  # get 'restaurants/new'
+  #
+  # get 'restaurants/show'
+  #
+  # get 'restaurants/create'
 
-  get 'sessions/new'
 
-  get 'sessions/create'
 
-  get 'sessions/destroy'
 
-  get 'reservations/new'
 
-  get 'reservations/create'
 
-  get 'reservations/destroy'
 
-  get 'reservations/show'
 
-  get 'users/new'
 
-  get 'users/create'
 
-  get 'restaurants/index'
 
-  get 'restaurants/new'
-
-  get 'restaurants/show'
-
-  get 'restaurants/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
