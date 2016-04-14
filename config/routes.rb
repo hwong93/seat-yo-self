@@ -1,4 +1,42 @@
 Rails.application.routes.draw do
+  get 'categories/create'
+
+  get 'categories/new'
+
+  get 'categories/show'
+
+  get 'categories/index'
+
+  get 'categories/index'
+
+  get 'categories/show'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'reservations/new'
+
+  get 'reservations/create'
+
+  get 'reservations/destroy'
+
+  get 'reservations/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'restaurants/index'
+
+  get 'restaurants/new'
+
+  get 'restaurants/show'
+
+  get 'restaurants/create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
