@@ -1,5 +1,44 @@
 == README
 
+To Try:
+
+- How does a customer see all their reservations??
+- how to make a reservation operate within a restaurant show view?
+    - nesting it
+        - access to view the reservation vs access to make the reservation
+        - we want them to only be able to see the reservation on the restaurant show view IF they’re signed in and it’s THEIR reservation
+
+Things to Think About:
+- format picture size on restaurant index page
+- format picture and title on restaurant show page
+- figure out how to take the date out restaurant opening & closing time. Maybe add text vs .open_hours .close_hours method
+- changing a user to an owner
+- being able to add restaurant owner
+    - form to create a restaurant
+    - are you an owner? Radio button
+- being able to update menu as owner
+- username = uniqueness (login … form with email or name)
+- how to override error messages with photo? In validations 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
