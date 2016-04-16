@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'restaurants#index'
 
   resources :categories, only: %i(index show)
@@ -9,7 +10,10 @@ Rails.application.routes.draw do
 
   resources :users, only: %i(new create)
 
-  resources :restaurants, except: %i(destroy update edit)
+  resources :restaurants, except: %i(destroy update edit) do
+    resources :reviews, only: %i(show create destroy)
+  end
+
   # get 'categories/create'
   #
   # get 'categories/new'
