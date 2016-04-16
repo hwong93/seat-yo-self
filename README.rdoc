@@ -1,5 +1,11 @@
 == README
 
+The have DONE so far list:
+
+  Den : - I added a reviews model/controller
+        - New routes and associations for said new Reviews model
+
+
 To Try:
 
 - How does a customer see all their reservations??
