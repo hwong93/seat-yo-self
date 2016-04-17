@@ -15,6 +15,7 @@
   </p>
 </div>
 
+<<<<<<< HEAD
 <h3> <%= @restaurant.name %>: Reviews </h3>
 
   <% @restaurant.reviews.each do |review| %>
@@ -58,4 +59,18 @@
   <p>
     Please <%= link_to "Log In", new_session_path %> to add yo Review.
   </p>
+=======
+<h2>Seat yo self</h2>
+
+
+<%= render 'reservations/form' %>
+
+
+<% if current_user %>
+  <% current_user.reservations.each do |res| %>
+  <p>
+    <%= res.res_date_time %>, <%= res.seats %>
+  </p>
+  <% end %>
+>>>>>>> houtai-branch
 <% end %>

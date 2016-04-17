@@ -1,10 +1,15 @@
 class ReservationsController < ApplicationController
+  # before_filter :load_restaurant
+  before_action :ensure_login, only: [:create, :destroy]
   def new
     @reservation = Reservation.new
+
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservation = @restaurant.reservations.build(reservation_params)
+      @reservation.user = current_user
     if @reservation.save
       redirect_to root_url
       # remember to redirect back to restaurant pages
@@ -28,4 +33,8 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:res_date_time, :seats, :restaurant_id, :user_id)
   end
+
+  # def load_restaurant
+  #   @restaurant = Restaurant.find(params[:restaurant_id])
+  # end
 end
