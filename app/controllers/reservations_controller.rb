@@ -14,7 +14,11 @@ class ReservationsController < ApplicationController
       redirect_to root_url
       # remember to redirect back to restaurant pages
     else
-      render :new
+      flash.now[:alert] = "AllhailJoSH"
+      if current_user
+        @review = @restaurant.reviews.build
+      end
+      render 'restaurants/show'
     end
   end
 
