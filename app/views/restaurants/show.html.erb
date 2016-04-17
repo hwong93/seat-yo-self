@@ -19,3 +19,12 @@
 
 
 <%= render 'reservations/form' %>
+
+
+<% if current_user %>
+  <% current_user.reservations.each do |res| %>
+  <p>
+    <%= res.res_date_time %>, <%= res.seats %>
+  </p>
+  <% end %>
+<% end %>
