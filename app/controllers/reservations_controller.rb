@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   # before_filter :load_restaurant
-  before_action :ensure_login, only: [:create, :destroy]
+  before_action :ensure_logged_in, only: [:create, :destroy]
   def new
     @reservation = Reservation.new
 
