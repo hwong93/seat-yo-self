@@ -5,11 +5,15 @@ Rails.application.routes.draw do
 
   resources :sessions, only: %i(new create destroy)
 
-  resources :reservations, only: %i(new create destroy show)
+
 
   resources :users, only: %i(new create)
 
-  resources :restaurants, except: %i(destroy update edit)
+  resources :restaurants, except: %i(destroy update edit) do
+    resources :reservations, only: %i(new create destroy show)
+  end
+
+
   # get 'categories/create'
   #
   # get 'categories/new'

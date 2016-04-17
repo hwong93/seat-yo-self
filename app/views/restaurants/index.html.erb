@@ -1,13 +1,24 @@
-<h1>Seat Yo Self @...</h1>
+<nav>
+  <ul>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+  </ul>
+</nav>
 
-  <div class="">
-    <% @restaurants.each do |restaurant| %>
-      <div class="restaurants">
-        <p>
-          <img src="http://www.tacobueno.com/media/1339/beeftacolarge.png?quality=65" />
-          <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
-          <%= restaurant.category.name %>
-        </p>
-      </div>
-    <% end %>
-  </div>
+
+<div class="hero-header">
+  <h1>Seat Yo' Self</h1>
+</div>
+
+<div class="homepage">
+  <% @restaurants.each do |restaurant| %>
+    <div class="restaurant-list">
+      <p>
+        <img src="http://www.tacobueno.com/media/1339/beeftacolarge.png?quality=65" />
+        <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
+        <%= restaurant.category.name %>
+      </p>
+    </div>
+  <% end %>
+</div>

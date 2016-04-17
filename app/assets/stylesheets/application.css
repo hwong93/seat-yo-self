@@ -1,3 +1,57 @@
+body {
+  background-image: url("Drake 1.png")
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.hero-header {
+  font-family: 'Courgette', cursive;
+  font-size: 50px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.restaurant-list{
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.restaurant-list img {
+  max-width: 100px;
+}
+
+.restaurant-info{
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+iframe {
+  position: absolute;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

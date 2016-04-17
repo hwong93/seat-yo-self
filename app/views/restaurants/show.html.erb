@@ -1,8 +1,18 @@
-<h1><%= @restaurant.name %> </h1>
+<nav>
+  <ul>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+  </ul>
+</nav>
 
-<div class="restaurant_show">
+
+<div class="hero-header">
+  <h1><%= @restaurant.name %> </h1>
+</div>
+
+<div class="restaurant-info">
   <p>
-    <%= @restaurant.category.name %><br/>
     <%= @restaurant.description %><br/>
     <% @restaurant.price.times do %>
       <%= p '$' %>
@@ -14,3 +24,5 @@
     <%= @restaurant.open_hours %> : <%= @restaurant.close_hours %>
   </p>
 </div>
+
+<iframe src="//giphy.com/embed/7e0EvlBD7nxZu?html5=true" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/drake-hotline-bling-7e0EvlBD7nxZu"></a></p>
