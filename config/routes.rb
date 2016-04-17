@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   resources :restaurants, except: %i(destroy update edit) do
     resources :reservations, except: %i(update edit index)
-
     resources :reviews, only: %i(show create destroy)
   end
 
