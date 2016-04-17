@@ -23,7 +23,7 @@ Things to Think About:
     - form to create a restaurant
     - are you an owner? Radio button
 - being able to update menu as owner
-- username = uniqueness (login … form with email or name)  - Den
+- username = uniqueness (login … form with email or name)  
 - how to override error messages with photo? In validations
 
 

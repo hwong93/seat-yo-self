@@ -10,14 +10,12 @@ Rails.application.routes.draw do
   resources :users, only: %i(new create)
 
   resources :restaurants, except: %i(destroy update edit) do
-<<<<<<< HEAD
+    resources :reservations, except: %i(update edit index)
+
     resources :reviews, only: %i(show create destroy)
   end
 
-=======
-    resources :reservations, only: %i(new create destroy show)
-  end
->>>>>>> houtai-branch
+
   # get 'categories/create'
   #
   # get 'categories/new'
