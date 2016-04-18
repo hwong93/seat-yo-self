@@ -10,8 +10,9 @@ class ReviewsController < ApplicationController
     @review = @restaurant.reviews.build(review_params)
     @review.user = current_user
     if @review.save
-      redirect_to restaurants_path, notice: 'Review added!'
+      redirect_to restaurants_url, notice: 'Review added!'
     else
+      flash.now[:alert] = "ERRPRPR"
       render 'restaurants/show'
     end
   end

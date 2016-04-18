@@ -10,6 +10,7 @@ Category.destroy_all
 
 Restaurant.destroy_all
 
+
 # 7
 Category.create!(
   :name => 'italian'

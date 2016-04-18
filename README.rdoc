@@ -6,6 +6,9 @@ The have DONE so far list:
         - New routes and associations for said new Reviews model
 
 
+Ooops
+
+
 To Try:
 
 - How does a customer see all their reservations??
@@ -23,7 +26,7 @@ Things to Think About:
     - form to create a restaurant
     - are you an owner? Radio button
 - being able to update menu as owner
-- username = uniqueness (login … form with email or name)  
+- username = uniqueness (login … form with email or name)
 - how to override error messages with photo? In validations
 
 

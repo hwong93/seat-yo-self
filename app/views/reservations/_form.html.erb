@@ -3,7 +3,7 @@
 
   <div>
     <%= f.label :res_date_time %>
-    <%= f.datetime_select :res_date_time %>
+    <%= f.datetime_select :res_date_time, :discard_minute => true %>
   </div>
   <div>
     <%= f.label :seats %>
