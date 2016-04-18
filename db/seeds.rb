@@ -123,7 +123,7 @@ Restaurant.create!(
   :capacity => 100,
   :open_hours => '11:00',
   :close_hours => '20:00',
-  :image => 'momofuku-daisho.jpg'
+  :image => 'momofuku-daisho.JPG'
 )
 Restaurant.create!(
   :name => 'Old School',
