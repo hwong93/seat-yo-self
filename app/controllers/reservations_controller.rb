@@ -24,8 +24,10 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
+    redirect_to restaurant_url(@restaurant)
     # redirect_to root_url
   end
 

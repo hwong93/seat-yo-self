@@ -22,7 +22,7 @@
 
     <% current_user.reservations.each do |res| %>
       <p>
-        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", restaurant_reservation_path(@restaurant), method: :delete, data: [confirm: "You shure?"] %>
+        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", @restaurant, method: :delete, data: [confirm: "You shure?"] %>
       </p>
     <% end %>
 
@@ -69,7 +69,7 @@
 
 <% else %>
   <p>
-    Please <%= link_to "Log In", new_session_path %> to add yo Review.
+    Please <%= link_to "Log In", new_session_path %> to seat yo self or add a review!
   </p>
 
   <% end %>
