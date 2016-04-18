@@ -1,12 +1,12 @@
 
-.wrapper {
-  background-image: url("Drake 1.png")
+.nav-bar{
+  width: 80%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #BC80FF;
 }
 
-header{
-  background-color: lightblue;
-
-}
 .nav-bar ul {
   list-style: none;
   margin: 0 10px;
@@ -17,11 +17,35 @@ header{
   display: inline-block;
 }
 
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+.content-wrap {
+  width: 80%;
+  background-color: lightblue;
+  margin: 0 auto;
+  padding: 90px 0;
+  overflow: auto;
+}
 .hero-header {
   font-family: 'Courgette', cursive;
   font-size: 50px;
   text-align: center;
-  border: 2px solid black;
+}
+
+[class*='col-'] {
+  float: left;
+}
+
+.col-2-3 {
+  width: 66.66%;
+}
+.col-1-3 {
+  width: 33.33%;
 }
 
 .restaurant-list{
@@ -41,12 +65,14 @@ header{
 }
 
 iframe {
-  position: absolute;
-
+  position: relative;
+  float:right;
 }
 
 
-
+footer {
+  text-align: center;
+}
 
 
 

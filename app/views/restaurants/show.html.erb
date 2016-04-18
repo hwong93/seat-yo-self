@@ -1,91 +1,93 @@
-<header>
-  <div class="nav-bar">
-  <ul>
-    <li>hello</li>
-    <li>hello</li>
-    <li>hello</li>
-  </ul>
-</div>
-</header>
+<section class="hero-header">
+  <div class="content-wrap">
+    <h1><%= @restaurant.name %> </h1>
+  </div>
+</section>
 
+<section class="restaurant-info">
+  <div class="content-wrap">
 
-
-<div class="hero-header">
-  <h1><%= @restaurant.name %> </h1>
-</div>
-
-<div class="restaurant-info">
-  <p>
-    <%= @restaurant.description %><br/>
-    <% @restaurant.price.times do %>
-      <%= p '$' %>
-    <% end %><br/>
-    <%= @restaurant.address %><br/>
-    <%= @restaurant.phone_number %>
-  </p>
-  <p>
-    <%= @restaurant.open_hours.to_s(:time) %> - <%= @restaurant.close_hours.to_s(:time) %>
-  </p>
-</div>
-
-
-<% if current_user %>
-  <h2>Seat yo self</h2>
-
-    <%= render 'reservations/form' %>
-
-    <% current_user.reservations.each do |res| %>
-      <p>
-        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", delete_restaurant_reservation_path(restaurant_id: @restaurant.id, id: res.id), method: :delete, data: {confirm: "You shure?"} %>
-      </p>
-    <% end %>
-
-  <% end %>
-
-<h3> <%= @restaurant.name %>: Reviews </h3>
-
-  <% @restaurant.reviews.each do |review| %>
     <p>
-      <%= review.comment %>
-      <br>
-      <% if review.user != nil %>
-        <em> By: <%= review.user.email %></em>
-        Reviewed on: <%= review.created_at %>
-      <% end %>
+      <%= @restaurant.description %><br/>
+      <% @restaurant.price.times do %>
+        <%= p '$' %>
+      <% end %><br/>
+      <%= @restaurant.address %><br/>
+      <%= @restaurant.phone_number %>
     </p>
-  <% end %>
+    <p>
+      <%= @restaurant.open_hours.to_s(:time) %> - <%= @restaurant.close_hours.to_s(:time) %>
+    </p>
+  </div>
+</section>
 
-  <h4>New Review</h4>
-  <% if current_user %>
+<section class="reservation-form">
+  <div class="content-wrap">
+    <% if current_user %>
+      <h2>Seat yo self</h2>
 
-  <%= form_for([@restaurant, @review]) do |f| %>
-    <% if @review.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> Prohibited this review, Yours truly: #TeamVeggie</h2>
+        <%= render 'reservations/form' %>
 
-        <ul>
-          <%= @review.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+        <% current_user.reservations.each do |res| %>
+          <p>
+            <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", delete_restaurant_reservation_path(restaurant_id: @restaurant.id, id: res.id), method: :delete, data: {confirm: "You shure?"} %>
+          </p>
+        <% end %>
+
+      <% end %>
+
+    <iframe src="//giphy.com/embed/7e0EvlBD7nxZu?html5=true" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/drake-hotline-bling-7e0EvlBD7nxZu"></a></p>
+
+  </div>
+</section>
+
+
+<section class="review-form">
+  <div class="content-wrap">
+    <h3> <%= @restaurant.name %>: Reviews </h3>
+
+      <% @restaurant.reviews.each do |review| %>
+        <p>
+          <%= review.comment %>
+          <br>
+          <% if review.user != nil %>
+            <em> By: <%= review.user.email %></em>
+            Reviewed on: <%= review.created_at %>
           <% end %>
-        </ul>
-      </div>
-    <% end %>
+        </p>
+      <% end %>
 
-    <div class="field">
-      <%= f.label :comment %><br/>
-      <%= f.text_area :comment %>
-    </div>
+      <h4>New Review</h4>
+      <% if current_user %>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+      <%= form_for([@restaurant, @review]) do |f| %>
+        <% if @review.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@review.errors.count, "error") %> Prohibited this review, Yours truly: #TeamVeggie</h2>
 
-<% else %>
-  <p>
-    Please <%= link_to "Log In", new_session_path %> to seat yo self or add a review!
-  </p>
+            <ul>
+              <%= @review.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-  <% end %>
+        <div class="field">
+          <%= f.label :comment %><br/>
+          <%= f.text_area :comment %>
+        </div>
 
-<iframe src="//giphy.com/embed/7e0EvlBD7nxZu?html5=true" width="400" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/drake-hotline-bling-7e0EvlBD7nxZu"></a></p>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+    <% else %>
+      <p>
+        Please <%= link_to "Log In", new_session_path %> to seat yo self or add a review!
+      </p>
+
+      <% end %>
+  </div>
+</section>

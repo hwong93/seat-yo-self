@@ -1,27 +1,26 @@
-<header>
-  <div class="nav-bar">
-  <ul>
-    <li>hello</li>
-    <li>hello</li>
-    <li>hello</li>
-  </ul>
-</div>
-</header>
 
-
-<div class="wrapper">
-<div class="hero-header">
-  <h1>Seat Yo' Self</h1>
-</div>
-
-<div class="homepage">
-  <% @restaurants.each do |restaurant| %>
-    <div class="restaurant-list">
-      <p>
-        <img src="http://www.tacobueno.com/media/1339/beeftacolarge.png?quality=65" />
-        <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
-        <%= restaurant.category.name %>
-      </p>
+<section class="hero-header">
+  <div class="grid">
+    <div class="col-2-3">
+       <h1>Seat Yo' Self</h1>
     </div>
-  <% end %>
-</div>
+    <div class="col-1-3">
+       <%= image_tag("Drake 1.png") %>
+    </div>
+  </div>
+</section>
+
+
+<section class="restaurant-listing">
+  <div class="content-wrap">
+    <% @restaurants.each do |restaurant| %>
+      <div class="restaurant-list">
+        <p>
+          <%= image_tag("gusto-101.jpg") %>
+          <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
+          <%= restaurant.category.name %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</section>
