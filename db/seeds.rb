@@ -5,28 +5,31 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-#
-# Category.destroy_all
-#
-# Restaurant.destroy_all
-# #
-# # 7
-# Category.create!(
-#   :name => 'italian'
-# )
-# # 8
-# Category.create!(
-#   :name => 'mexican'
-# )
-#
-# Restaurant.create!(
-#   :name => 'Grand Electric',
-#   :description => 'Mexican from the heart!',
-#   :price => 3,
-#   :address => '123 sesame',
-#   :phone_number => '123-456-7890',
-#   :category_id => 6,
-#   :capacity => 55,
-#   :open_hours => '11:00',
-#   :close_hours => '20:00'
+
+
+Category.destroy_all
+
+Restaurant.destroy_all
+
+
+# 7
+Category.create!(
+  :name => 'italian'
+)
+# 8
+Category.create!(
+  :name => 'mexican'
+)
+
+Restaurant.create!(
+  :name => 'Grand Electric',
+  :description => 'Mexican from the heart!',
+  :price => 3,
+  :address => '123 sesame',
+  :phone_number => '123-456-7890',
+  :category_id => 6,
+  :capacity => 55,
+  :open_hours => '11:00',
+  :close_hours => '20:00'
+
 )
