@@ -49,6 +49,8 @@
 }
 
 .restaurant-list{
+  display: inline-block;
+  width: 30%;
   font-family: 'Courgette', cursive;
   font-size: 30px;
   text-align: center;
@@ -57,6 +59,8 @@
 .restaurant-list img {
   max-width: 100px;
 }
+
+
 
 .restaurant-info{
   font-family: 'Courgette', cursive;
