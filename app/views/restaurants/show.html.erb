@@ -11,7 +11,7 @@
     <%= @restaurant.phone_number %>
   </p>
   <p>
-    <%= @restaurant.open_hours %> : <%= @restaurant.close_hours %>
+    <%= @restaurant.open_hours.to_s(:time) %> - <%= @restaurant.close_hours.to_s(:time) %>
   </p>
 </div>
 
@@ -22,7 +22,7 @@
 
     <% current_user.reservations.each do |res| %>
       <p>
-        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", @restaurant, method: :delete, data: [confirm: "You shure?"] %>
+        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", delete_restaurant_reservation_path(restaurant_id: @restaurant.id, id: res.id), method: :delete, data: {confirm: "You shure?"} %>
       </p>
     <% end %>
 

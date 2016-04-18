@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 Category.destroy_all
 
 Restaurant.destroy_all
@@ -34,10 +35,11 @@ Restaurant.create!(
   :price => 2,
   :address => '1330 Queen St W',
   :phone_number => '(416)627-3459',
-  :category_id => 2,
+  :category => Category.find_by(name: "Mexican"),
   :capacity => 55,
   :open_hours => '11:00',
   :close_hours => '20:00'
+
 )
 Restaurant.create!(
   :name => 'Bent',
@@ -45,7 +47,7 @@ Restaurant.create!(
   :price => 3,
   :address => '777 Dundas St W',
   :phone_number => '(647)352-0092',
-  :category_id => 4,
+  :category => Category.find_by(name: "Asian Fusion"),
   :capacity => 100,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -56,7 +58,7 @@ Restaurant.create!(
   :price => 4,
   :address => '455 King St W',
   :phone_number => '(416)979-9696',
-  :category_id => 5,
+  :category => Category.find_by(name: "Contemporary Canadian"),
   :capacity => 75,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -66,7 +68,7 @@ Restaurant.create!(
   :description => 'Farm-to-Table Fresh Brunch',
   :price => 2,
   :address => '(416)703-7368',
-  :category_id => 4,
+  :category => Category.find_by(name: "Brunch"),
   :capacity => 40,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -77,7 +79,7 @@ Restaurant.create!(
   :price => 3,
   :address => '221 Ossington Ave',
   :phone_number => '(416)532-8000',
-  :category_id => 1,
+  :category => Category.find_by(name: "Italian"),
   :capacity => 100,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -88,7 +90,7 @@ Restaurant.create!(
   :price => 3,
   :address => '642 Bloor St W',
   :phone_number => '(416)901-5188',
-  :category_id => 3,
+  :category => Category.find_by(name: "Asian Fusion"),
   :capacity => 60,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -99,18 +101,18 @@ Restaurant.create!(
   :price => 4,
   :address => '101 Portland St',
   :phone_number => '(416)504-9669',
-  :category_id => 1,
+  :category => Category.find_by(name: "Italian"),
   :capacity => 50,
   :open_hours => '11:00',
   :close_hours => '20:00'
 )
 Restaurant.create!(
-  :name => 'Momofoku DAISHO',
+  :name => 'Momofuku DAISHO',
   :description => 'Modern Eclectic Cuisine',
   :price => 4,
   :address => '190 University Ave',
   :phone_number => '(647)253-8000',
-  :category_id => 5,
+  :category => Category.find_by(name: "Contemporary Canadian"),
   :capacity => 100,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -121,7 +123,7 @@ Restaurant.create!(
   :price => 2,
   :address => '800 Dundas St W',
   :phone_number => '(416)815-8790',
-  :category_id => 4,
+  :category => Category.find_by(name: "Brunch"),
   :capacity => 70,
   :open_hours => '11:00',
   :close_hours => '20:00'
