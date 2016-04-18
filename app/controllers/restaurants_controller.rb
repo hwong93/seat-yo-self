@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
       @review = @restaurant.reviews.build
       @reservation = @restaurant.reservations.build
     end
-    
+
   end
 
   def create
