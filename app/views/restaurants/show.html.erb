@@ -15,17 +15,15 @@
   </p>
 </div>
 
+<% if current_user %>
   <h2>Seat yo self</h2>
 
+    <%= render 'reservations/form' %>
 
-<%= render 'reservations/form' %>
-
-
-  <% if current_user %>
     <% current_user.reservations.each do |res| %>
-    <p>
-      <%= res.res_date_time %>, <%= res.seats %>
-    </p>
+      <p>
+        <%= res.res_date_time %>, <%= res.seats %> | <%= link_to "Delete", restaurant_reservation_path(@restaurant), method: :delete, data: [confirm: "You shure?"] %>
+      </p>
     <% end %>
 
   <% end %>
@@ -43,8 +41,8 @@
     </p>
   <% end %>
 
-<% if current_user %>
   <h4>New Review</h4>
+  <% if current_user %>
 
   <%= form_for([@restaurant, @review]) do |f| %>
     <% if @review.errors.any? %>
