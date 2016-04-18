@@ -11,17 +11,19 @@
 </section>
 
 
+
+
 <section class="restaurant-listing">
   <div class="content-wrap">
-    <% @restaurants.each do |restaurant| %>
-      <div class="restaurant-list">
 
-            <p>
-              <%= image_tag("gusto-101.jpg") %>
-              <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
-              <%= restaurant.category.name %>
-            </p>
-      </div>
-    <% end %>
+  <% @restaurants.each do |restaurant| %>
+    <div class="restaurant-list">
+      <p>
+        <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %>
+        <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
+        <%= restaurant.category.name %>
+      </p>
+    </div>
+  <% end %>
   </div>
 </section>

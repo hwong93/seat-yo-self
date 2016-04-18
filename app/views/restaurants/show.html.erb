@@ -8,6 +8,8 @@
   <div class="content-wrap">
 
     <p>
+
+      <%= image_tag @restaurant.image %><br/>
       <%= @restaurant.description %><br/>
       <% @restaurant.price.times do %>
         <%= p '$' %>
