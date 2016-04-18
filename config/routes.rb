@@ -6,16 +6,14 @@ Rails.application.routes.draw do
 
   resources :sessions, only: %i(new create destroy)
 
-
   resources :users, only: %i(new create)
-
-
 
   resources :restaurants, except: %i(destroy update edit) do
     resources :reservations, except: %i(update edit index ) do
       delete 'destroy', on: :member, as: 'delete'
     end
     resources :reviews, only: %i(show create delete)
+
   end
 
 
