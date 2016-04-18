@@ -45,7 +45,7 @@ Restaurant.create!(
   :price => 3,
   :address => '777 Dundas St W',
   :phone_number => '(647)352-0092',
-  :category_id => 4,
+  :category_id => 5,
   :capacity => 100,
   :open_hours => '11:00',
   :close_hours => '20:00'
@@ -105,7 +105,7 @@ Restaurant.create!(
   :close_hours => '20:00'
 )
 Restaurant.create!(
-  :name => 'Momofoku DAISHO',
+  :name => 'Momofuku DAISHO',
   :description => 'Modern Eclectic Cuisine',
   :price => 4,
   :address => '190 University Ave',
