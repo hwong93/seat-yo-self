@@ -15,11 +15,12 @@
   <div class="content-wrap">
     <% @restaurants.each do |restaurant| %>
       <div class="restaurant-list">
-        <p>
-          <%= image_tag("gusto-101.jpg") %>
-          <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
-          <%= restaurant.category.name %>
-        </p>
+
+            <p>
+              <%= image_tag("gusto-101.jpg") %>
+              <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
+              <%= restaurant.category.name %>
+            </p>
       </div>
     <% end %>
   </div>
