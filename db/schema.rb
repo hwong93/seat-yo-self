@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417204013) do
+ActiveRecord::Schema.define(version: 20160418201813) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -28,19 +28,8 @@ ActiveRecord::Schema.define(version: 20160417204013) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "restaurants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.integer  "price"
-    t.string   "address"
-    t.string   "phone_number"
-    t.integer  "category_id"
-    t.integer  "capacity"
-    t.time     "open_hours"
-    t.time     "close_hours"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+# Could not dump table "restaurants" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"

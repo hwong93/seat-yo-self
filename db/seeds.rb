@@ -38,7 +38,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Mexican"),
   :capacity => 55,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'grand-electric.jpg'
 
 )
 Restaurant.create!(
@@ -50,7 +51,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Asian Fusion"),
   :capacity => 100,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'bent.jpg'
 )
 Restaurant.create!(
   :name => 'Frings',
@@ -61,7 +63,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Contemporary Canadian"),
   :capacity => 75,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'frings.jpg'
 )
 Restaurant.create!(
   :name => 'Saving Grace',
@@ -71,7 +74,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Brunch"),
   :capacity => 40,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'saving-grace.jpg'
 )
 Restaurant.create!(
   :name => 'Libretto Pizzeria',
@@ -82,7 +86,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Italian"),
   :capacity => 100,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'libretto.jpg'
 )
 Restaurant.create!(
   :name => 'Barrio Coreano',
@@ -93,7 +98,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Asian Fusion"),
   :capacity => 60,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'barrio-coreano.jpg'
 )
 Restaurant.create!(
   :name => 'Gusto 101',
@@ -104,7 +110,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Italian"),
   :capacity => 50,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'gusto-101.jpg'
 )
 Restaurant.create!(
   :name => 'Momofuku DAISHO',
@@ -115,7 +122,8 @@ Restaurant.create!(
   :category => Category.find_by(name: "Contemporary Canadian"),
   :capacity => 100,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'momofuku-daisho.jpg'
 )
 Restaurant.create!(
   :name => 'Old School',
@@ -126,5 +134,6 @@ Restaurant.create!(
   :category => Category.find_by(name: "Brunch"),
   :capacity => 70,
   :open_hours => '11:00',
-  :close_hours => '20:00'
+  :close_hours => '20:00',
+  :image => 'old-school.jpg'
 )
