@@ -8,3 +8,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+# to run a singular test ruby -I test test/folder/file
+# run rakes in RAILS_ENV=test and regular environment
+# tail -f /log/tests
