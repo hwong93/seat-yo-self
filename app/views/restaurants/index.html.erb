@@ -12,17 +12,22 @@
 
 
 
-
 <section class="restaurant-listing">
   <div class="content-wrap">
 
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant-list">
-        <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %><br/>
+
+      <p class="restaurant-image"
+        <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %>
+      </p>
+      <p class="restaurant-name">
         <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
-      <h6 class="category-name">
+      </p>
+      <p class="restaurant-category">
         <%= restaurant.category.name %>
-      </h6>
+      </p>
+
     </div>
   <% end %>
   </div>

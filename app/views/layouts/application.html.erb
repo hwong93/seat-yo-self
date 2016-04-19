@@ -6,39 +6,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Passion+One|Pacifico|Shadows+Into+Light|Covered+By+Your+Grace|Courgette' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 </head>
 
-<header>
-
-    <nav class="nav-bar">
-      <section id='nav-grid'>
-        <div class="home-button">
-          <%= link_to image_tag('seatyoself.jpg'), root_url %>
-        </div>
-
-    <ul>
-      <% if current_user %>
-      <li>Signed in as <%= current_user.name %>
-        <%= link_to "Log Out", session_path("current"), :method => :delete %> |
-      </li>
-      <% else %>
-      <li>
-        <%= link_to "Log In", new_session_path %> | <%= link_to 'Sign up', new_user_path %> |
-      </li>
-        <% end %>
-      <li>
-        <%= link_to "Cuisines", categories_path %>
-      </li>
-    </ul>
-  </section>
-
-  </nav>
-</header>
 
 <body>
-  <div class="container">
-    <main>
+  <header>
+
+    <nav class="nav-bar">
+      <div class="home-button">
+        <%= link_to image_tag('seatyoself.jpg'), root_url %>
+      </div>
+      <ul class="login-logic">
+        <% if current_user %>
+        <li>Signed in as <%= current_user.name %>
+          <%= link_to "Log Out", session_path("current"), :method => :delete %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to "Log In", new_session_path %> | <%= link_to 'Sign up', new_user_path %>
+        </li>
+          <% end %>
+        </ul>
+
+      <ul class="nav-list">
+        <li>
+          <%= link_to "Cuisines", categories_path %>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+
       <% if flash[:notice] %>
       <p id="notice">
         <%= flash[:notice] %>
@@ -51,22 +54,24 @@
       <% end %>
 
       <%= yield %>
-    </main>
-
-
+    </div>
+  </main>
 
   <footer>
-    <h5>Contact Us : Thorugh SLACK</h5>
-      <ul>
-        <li>@dennischoi</li>
-        <li>@madfchr</li>
-        <li>@kimmiies</li>
-        <li>@houtaibowtie</li>
+    <div class="container">
+      <p class="copyright">&#169; 2015 by Team Veg</p>
+
+      <ul class="social-links">
+        <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
       </ul>
-    <p class="copyright">Copyright &#169; 2015 by Team Veg</p>
+
+
+    </div>
+
   </footer>
 
 
-  </div>
 </body>
 </html>

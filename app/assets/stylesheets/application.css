@@ -1,16 +1,15 @@
 
-body{
-  background: cyan;
+nav {
+  background-color: #333;
+  color: white;
+  height: 60px;
+  overflow: hidden;
+  padding: 0 30px;
 }
 
-.nav-bar{
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: tomato;
-  padding: 0 30px;
-  text-align: right;
-  overflow: hidden;
+.nav-bar li {
+  display: inline;
+
 }
 
 .nav-bar ul {
@@ -18,11 +17,21 @@ body{
   float: right;
   margin: 0 10px;
   padding: 0;
+  float:right;
+  line-height: 60px;
 }
 
-.nav-bar li {
-  display: inline-block;
+/*.nav-list ul {
+  float: right;
+  line-height: 60px;
 }
+
+.login-logic ul {
+  float: left;
+  line-height: 60px;
+}*/
+
+
 
 .container {
   width: 80%;
@@ -60,8 +69,8 @@ body{
 }
 
 .home-button img{
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   line-height: 60px;
 
   float: left;
@@ -84,6 +93,17 @@ body{
   max-width: 150px;
 }
 
+.restaurant-image {
+
+}
+.restaurant-name {
+  font-size: 25px;
+
+}
+
+.restaurant-category {
+  font-size: 20px;
+}
 
 
 .restaurant-info{
@@ -99,24 +119,37 @@ iframe {
 
 
 footer {
-  overflow: hidden;
-  height: 70px;
   background-color: #333;
   color: white;
-
+  overflow: hidden;
+  height: 60px;
+  padding: 0 30px;
 }
 
-.copyright{
-  float: right;
+
+.copyright {
   margin: 0;
-  line-height: 70px;
-}
-
-footer ul{
-  display: inline;
+  padding: 0;
+  font-size: 14px;
   float: left;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.social-links {
   margin: 0;
-  font-size: 10px;
+  padding: 0;
+  float: right;
+  line-height: 60px;
+}
+
+.social-links li {
+  font-size: 12px;
+  padding: 0 6px;
+  display: inline;
+  list-style-type: none;
+
 }
 
 footer h5{
@@ -124,7 +157,21 @@ footer h5{
 
 }
 
+a {
+  text-decoration: none;
+}
 
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
 
 
 
