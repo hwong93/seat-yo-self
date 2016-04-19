@@ -18,11 +18,11 @@
 
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant-list">
-      <p>
-        <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %>
+        <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %><br/>
         <%= link_to restaurant.name, restaurant_path(restaurant.id) %><br/>
+      <h6 class="category-name">
         <%= restaurant.category.name %>
-      </p>
+      </h6>
     </div>
   <% end %>
   </div>

@@ -11,23 +11,29 @@
 
 <header>
 
-    <div class="nav-bar">
+    <nav class="nav-bar">
+      <section id='nav-grid'>
+        <div class="home-button">
+          <%= link_to image_tag('seatyoself.jpg'), root_url %>
+        </div>
+
     <ul>
       <% if current_user %>
       <li>Signed in as <%= current_user.name %>
-        <%= link_to "Log Out", session_path("current"), :method => :delete %>
+        <%= link_to "Log Out", session_path("current"), :method => :delete %> |
       </li>
       <% else %>
       <li>
-        <%= link_to "Log In", new_session_path %> | <%= link_to 'Sign up', new_user_path %>
+        <%= link_to "Log In", new_session_path %> | <%= link_to 'Sign up', new_user_path %> |
       </li>
         <% end %>
       <li>
         <%= link_to "Cuisines", categories_path %>
       </li>
     </ul>
+  </section>
 
-  </div>
+  </nav>
 </header>
 
 <body>
