@@ -1,4 +1,8 @@
 
+body{
+  background: cyan;
+}
+
 .nav-bar{
   height: 60px;
   margin-left: auto;
@@ -30,9 +34,9 @@
 .content-wrap {
   width: 100%;
   background-color: lightblue;
-  margin: 0 auto;
-  padding: 90px 0;
-  overflow: auto;
+  margin: 0;
+  padding: 60px 0;
+  overflow: hidden;
 }
 .hero-header {
   font-family: 'Courgette', cursive;
@@ -58,7 +62,7 @@
 .home-button img{
   width: 50px;
   height: 50px;
-  line-height: 50px;
+  line-height: 60px;
 
   float: left;
 }
@@ -95,10 +99,30 @@ iframe {
 
 
 footer {
-  text-align: center;
+  overflow: hidden;
+  height: 70px;
+  background-color: #333;
+  color: white;
+
 }
 
+.copyright{
+  float: right;
+  margin: 0;
+  line-height: 70px;
+}
 
+footer ul{
+  display: inline;
+  float: left;
+  margin: 0;
+  font-size: 10px;
+}
+
+footer h5{
+  margin: 0;
+
+}
 
 
 
