@@ -18,7 +18,7 @@
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant-list">
 
-      <p class="restaurant-image"
+      <p class="restaurant-image">
         <%= link_to image_tag(restaurant.image), restaurant_path(restaurant.id) %>
       </p>
       <p class="restaurant-name">
