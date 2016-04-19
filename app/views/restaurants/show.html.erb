@@ -20,6 +20,8 @@
     <p>
       <%= @restaurant.open_hours.to_s(:time) %> - <%= @restaurant.close_hours.to_s(:time) %>
     </p>
+    <%= image_tag(@restaurant.map) %>
+
   </div>
 </section>
 

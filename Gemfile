@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Ruby geocoder to set map locations for each restaurant
+# AIzaSyBZTKRSoig9LU-2KMKCIYN8gvqzObYjvOM = API key
+  # gem 'geocoder'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
