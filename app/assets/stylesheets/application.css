@@ -31,16 +31,6 @@ nav {
   line-height: 60px;
 }
 
-/*.nav-list ul {
-  float: right;
-  line-height: 60px;
-}
-
-.login-logic ul {
-  float: left;
-  line-height: 60px;
-}*/
-
 body {
   margin: 0;
 }
@@ -51,7 +41,7 @@ main{
 
 
 .container {
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
@@ -195,6 +185,39 @@ a:hover {
 .container a {
   color: #333;
 }
+
+@media (max-width: 950px) {
+  .hero-header {
+    font-family: 'Courgette', cursive;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .restaurant-name {
+    font-size: 25px;
+  }
+
+  .restaurant-category {
+    font-size: 15px;
+  }
+
+  .restaurant-info{
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 /* Category index */
