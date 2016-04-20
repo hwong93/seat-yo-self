@@ -11,10 +11,14 @@ nav {
   overflow: hidden;
   padding: 0 30px;
   margin-bottom: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav-bar li {
   display: inline;
+  padding-right: 30px;
 
 }
 
@@ -41,6 +45,9 @@ body {
   margin: 0;
 }
 
+main{
+  padding-top: 60px;
+}
 
 
 .container {
@@ -54,7 +61,7 @@ body {
   width: 100%;
   background-color: lightblue;
   margin: 0;
-  padding: 60px 0;
+  padding: 0;
   overflow: hidden;
 }
 .hero-header {
@@ -159,6 +166,8 @@ footer {
   padding: 0 6px;
   display: inline;
   list-style-type: none;
+  background: white;
+  margin: 0 5px;
 
 }
 
@@ -219,9 +228,43 @@ a:hover {
   margin-bottom: 0;
 }
 
+.sign-up{
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-image: url(http://zingerbugimages.com/backgrounds/wrinkled_white_paper_background_1800x1600.jpg);
+  padding-bottom: 33px;
+}
 
+.title-signup{
+  font-size: 40px;
+}
 
+.log-in{
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-image: url(http://zingerbugimages.com/backgrounds/wrinkled_white_paper_background_1800x1600.jpg);
+  padding-bottom: 33px;
+}
 
+.title-login{
+  font-size: 40px;
+}
+
+.actions{
+  margin-top: 20px;
+}
+
+.field{
+  margin: 10px 0;
+}
+
+.cravin-drake{
+  text-align: center;
+  font-size: 35px;
+  font-family: Courgette, cursive;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

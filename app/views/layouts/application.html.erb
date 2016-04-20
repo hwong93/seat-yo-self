@@ -20,7 +20,7 @@
       </div>
       <ul class="login-logic">
         <% if current_user %>
-        <li>Signed in as <%= current_user.name %>
+        <li>Signed in as <%= current_user.name %> |
           <%= link_to "Log Out", session_path("current"), :method => :delete %>
         </li>
         <% else %>

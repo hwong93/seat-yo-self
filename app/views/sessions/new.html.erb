@@ -1,18 +1,22 @@
-<h1>Log IN</h1>
+<section class="log-in">
 
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br/>
-    <%= text_field_tag :email %>
-  </div>
+  <h1 class="title-login">Log IN</h1>
 
-  <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
-  </div>
+  <%= form_tag sessions_path do %>
+    <div class="field">
+      <%= label_tag :email %><br/>
+      <%= text_field_tag :email %>
+    </div>
 
-  <div class="actions">
-    <%= submit_tag "Log In" %>
-  </div>
+    <div class="field">
+      <%= label_tag :password %><br/>
+      <%= password_field_tag :password %>
+    </div>
 
-<% end %>
+    <div class="actions">
+      <%= submit_tag "Log In" %>
+    </div>
+
+  <% end %>
+
+</section>
