@@ -100,12 +100,9 @@ main{
   max-width: 150px;
 }
 
-.restaurant-image {
 
-}
 .restaurant-name {
   font-size: 25px;
-
 }
 
 .restaurant-category {
@@ -186,38 +183,6 @@ a:hover {
   color: #333;
 }
 
-@media (max-width: 950px) {
-  .hero-header {
-    font-family: 'Courgette', cursive;
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .restaurant-name {
-    font-size: 25px;
-  }
-
-  .restaurant-category {
-    font-size: 15px;
-  }
-
-  .restaurant-info{
-    font-family: 'Courgette', cursive;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  }
-
-
-
-
-
-
-
-
-
-
 
 
 /* Category index */
@@ -241,7 +206,6 @@ a:hover {
   text-align: center;
 }
 
-
 .category-list {
   font-family: 'Courgette', cursive;
   background-color: lightblue;
@@ -251,28 +215,54 @@ a:hover {
   margin-bottom: 0;
 }
 
+
+/* Sign Up Page */
+
+
+/* trying to style button */
+
+/*.actions{
+  font-family: 'Passion One', cursive;
+  font-size: 20px;
+
+  background-color: black;
+  color: whitesmoke;
+  height: 40px;
+  width: 70px;
+  border: 1px solid black;
+  border-radius: 30px;
+}*/
+
 .sign-up{
   text-align: center;
-  border: 2px solid red;
-  border-radius: 5px;
+  font-family: 'Passion One', cursive;
   background-image: url(http://zingerbugimages.com/backgrounds/wrinkled_white_paper_background_1800x1600.jpg);
   padding-bottom: 33px;
+  height: 480px;
 }
 
 .title-signup{
   font-size: 40px;
+  font-family: 'Courgette', cursive;
+  margin-top: 0;
+  padding-top: 20px;
 }
+
+/* Log-in Page */
 
 .log-in{
   text-align: center;
-  border: 2px solid red;
-  border-radius: 5px;
+  font-family: 'Passion One', cursive;
   background-image: url(http://zingerbugimages.com/backgrounds/wrinkled_white_paper_background_1800x1600.jpg);
   padding-bottom: 33px;
+  height: 480px;
 }
 
 .title-login{
   font-size: 40px;
+  font-family: 'Courgette', cursive;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .actions{
@@ -281,6 +271,7 @@ a:hover {
 
 .field{
   margin: 10px 0;
+  padding: 5px;
 }
 
 .cravin-drake{
@@ -304,3 +295,26 @@ a:hover {
  *= require_tree .
  *= require_self
  */
+ /*Attempted Media Query as the Page gets smaller*/
+ @media (max-width: 950px) {
+   .hero-header {
+     font-family: 'Courgette', cursive;
+     font-size: 40px;
+     text-align: center;
+   }
+
+   .restaurant-name {
+     font-size: 25px;
+   }
+
+   .restaurant-category {
+     font-size: 15px;
+   }
+
+   .restaurant-info{
+     font-family: 'Courgette', cursive;
+     font-size: 20px;
+     text-align: center;
+   }
+
+   }

@@ -6,6 +6,18 @@ The have DONE so far list:
         - New routes and associations for said new Reviews model
 
 
+  Kim : - Working on Login/Sign up Pages. Temporary Page height fix with 480px
+        - Updated fonts and positioning
+        - Trying to set height to 100% (of parent .container) then 100% of (of parent body) then 100% (of parent html..aka the page)
+        - Tried to style the submit buttons. looked nice using inspect and ugly when actually applied
+
+
+
+
+
+
+
+
 Ooops
 
 
