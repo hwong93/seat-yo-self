@@ -1,23 +1,15 @@
+<section class="category-page">
+<h1>Drake gots ta know what ya CRAVIN</h1>
 
 
-<div class="category_home">
-  <span class="head">
-
-    <h1>Drake gots ta know what ya CRAVIN</h1>
-  </span>
-  <span class="drake">
-
-  <%= image_tag("Drake 4.png") %>
-  </span>
-</div>
-
-
-<div class="category-list">
-  <% @categories.each do |category| %>
-  <div class="cat-names">
-    <p>
-      <%= link_to category.name, category_path(category.id) %>
-    </p>
+  <div class="category_home">
+    <div class="category-list">
+         <% @categories.each do |category| %>
+          <p>
+            <%= link_to category.name, category_path(category.id) %>
+          </p>
+        <% end %>
+      </div>
+         <%= image_tag("Drake 4.png") %>
   </div>
-    <% end %>
-</div>
+</section>

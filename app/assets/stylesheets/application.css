@@ -183,6 +183,10 @@ a:hover {
     color: #fff;
 }
 
+.container a {
+  color: #333;
+}
+
 
 /* Category index */
 .category_home {
