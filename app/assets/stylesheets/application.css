@@ -173,6 +173,10 @@ a:hover {
     color: #fff;
 }
 
+.container a {
+  color: #333;
+}
+
 
 
 
