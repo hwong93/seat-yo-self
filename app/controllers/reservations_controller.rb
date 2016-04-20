@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     @reservation = @restaurant.reservations.build(reservation_params)
       @reservation.user = current_user
     if @reservation.save
-      redirect_to root_url
+      redirect_to restaurant_url(@restaurant)
       # remember to redirect back to restaurant pages
     else
       flash.now[:alert] = "AllhailJoSH"
