@@ -202,18 +202,9 @@ a:hover {
 .drake{
   width: 49.5%;
   display: inline-block;
+  text-align: center;
 }
 
-
-.category_home h1 {
-  /*width: 50%;*/
-}
-
-.drake {
-  position: relative;
-  top: 0;
-  left: 0;
-}
 
 .category-list {
   font-family: 'Courgette', cursive;
