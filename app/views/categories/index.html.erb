@@ -1,16 +1,23 @@
-<h1>Drake gots ta know what ya CRAVIN</h1>
 
 
 <div class="category_home">
-  <% @categories.each do |category| %>
+  <span class="head">
+
+    <h1>Drake gots ta know what ya CRAVIN</h1>
+  </span>
+  <span class="drake">
+
+  <%= image_tag("Drake 4.png") %>
+  </span>
+</div>
+
+
 <div class="category-list">
-  <div class="col-2-3">
+  <% @categories.each do |category| %>
+  <div class="cat-names">
     <p>
       <%= link_to category.name, category_path(category.id) %>
     </p>
   </div>
     <% end %>
-  <div class="col-1-3">
-     <%= image_tag("Drake 4.png") %>
-  </div>
 </div>

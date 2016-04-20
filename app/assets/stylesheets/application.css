@@ -1,3 +1,8 @@
+*,
+*:after,
+*:before, {
+  box-sizing: border-box;
+}
 
 nav {
   background-color: #333;
@@ -5,6 +10,7 @@ nav {
   height: 60px;
   overflow: hidden;
   padding: 0 30px;
+  margin-bottom: 0px;
 }
 
 .nav-bar li {
@@ -30,6 +36,10 @@ nav {
   float: left;
   line-height: 60px;
 }*/
+
+body {
+  margin: 0;
+}
 
 
 
@@ -173,6 +183,46 @@ a:hover {
     color: #fff;
 }
 
+
+/* Category index */
+.category_home {
+  overflow: auto;
+  margin: 0;
+  font-family: 'Courgette', cursive;
+  display: block;
+  width: 100%;
+
+}
+
+.head{
+  width: 49.5%;
+  display: inline-block;
+
+}
+.drake{
+  width: 49.5%;
+  display: inline-block;
+}
+
+
+.category_home h1 {
+  /*width: 50%;*/
+}
+
+.drake {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.category-list {
+  font-family: 'Courgette', cursive;
+  background-color: lightblue;
+  padding-left: 15px;
+}
+.cat-names p{
+  margin-bottom: 0;
+}
 
 
 
