@@ -1,6 +1,19 @@
 
 <%= form_for ([@restaurant, @reservation]) do |f| %>
 
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> Prohibited you from seatin yo self, sucka</h2>
+
+      <ul>
+        <%= @reservation.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
   <div>
     <%= f.label :res_date_time %>
     <%= f.datetime_select :res_date_time, :discard_minute => true %>
