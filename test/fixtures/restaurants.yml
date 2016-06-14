@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyString
-  price: 1
-  address: MyString
-  phone_number: MyString
+big:
+  name: McDonalds
+  description: burgers
+  price: 3
+  address: 232 King St
+  phone_number: 862987526
   category_id: 1
-  capacity: 1
+  capacity: 100
   open_hours: 2016-04-14 15:47:09
   close_hours: 2016-04-14 15:47:09
 
-two:
-  name: MyString
+small:
+  name: Burger King
   description: MyString
   price: 1
   address: MyString
   phone_number: MyString
   category_id: 1
-  capacity: 1
+  capacity: 50
   open_hours: 2016-04-14 15:47:09
   close_hours: 2016-04-14 15:47:09

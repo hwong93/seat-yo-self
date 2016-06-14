@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  res_date: 2016-04-14
-  res_time: 2016-04-14 15:42:27
+  res_date_time: 2016-04-14 15:42:27
   seats: 1
   restaurant_id: 1
   user_id: 1
 
 two:
-  res_date: 2016-04-14
-  res_time: 2016-04-14 15:42:27
+  res_date_time: 2016-04-14 15:42:27
   seats: 1
   restaurant_id: 1
   user_id: 1
